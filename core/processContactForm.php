@@ -3,6 +3,7 @@
 # Include the Autoloader (see "Libraries" for install instructions)
 require '../vendor/autoload.php';
 require '../core/About/src/Validation/Validate.php';
+require '../../keys.php';
 
 use About\Validation;
 use Mailgun\Mailgun;
@@ -48,15 +49,17 @@ if(empty($valid->errors) && !empty($input)){
 // valid data was submitted, proceed
 
 # Instantiate the client.
-$mgClient = new Mailgun('key-7797fb76fe247159c6720656ba10022d');
+$mgClient = new Mailgun($mailgunKey);
 $domain = "sandbox572c462c5d164bbabcd3c78ac7e1087c.mailgun.org";
 
 # Make the call to the client.
 $result = $mgClient->sendMessage("$domain",
-          array('from'    => 'Mailgun Sandbox <postmaster@andbox572c462c5d164bbabcd3c78ac7e1087c.mailgun.org>',
-               'to'      => 'Kent Clapp <kent.clapp@gmail.com>',
-                'subject' => 'Hello Kent Clapp',
-                'text'    => 'Congratulations Kent Clapp, you just sent an email with Mailgun! You are truly awesome! '));
+          array('from'    => "{$input['first_name']} {$input['last_name']} <{$input['email']}>",
+                'to'      => 'Kent Clapp <kent.clapp@gmail.com>',
+                'subject' => $input['subject'],
+                'text'    => $input['message']
+            ));
+
 var_dump($result);
 
 }else{
