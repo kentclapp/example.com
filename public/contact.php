@@ -1,11 +1,10 @@
 <?php
+
 var_dump($_POST);
 echo "line break<br>";
 echo "<br>";
 
 $validEmail = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
-
-
 
 $data = $_POST;
 
@@ -28,6 +27,8 @@ foreach($data as $key => $value){
         break;
     }
 }
+
+
 var_dump($errors);
 echo "line break<br>";
 echo "<br>";
@@ -50,7 +51,7 @@ foreach($data as $key => $value){
       <nav>
         <a href="/">Home</a> |
         <a href="/resume.html">Resume</a> |
-        <a href="contact.php">Contact</a>
+        <a href="/contact.php">Contact</a>
     </nav>
 
 <h1 id="header" class="header">Contact</h1>
