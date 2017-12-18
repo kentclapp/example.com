@@ -24,7 +24,7 @@
             </div>
             <div id="Sidebar">
               <div id="AboutMe">
-                <div class="header">Hello, I am YOUR-NAME</div>
+                <div class="header">Hello, I am Kent Clapp</div>
                 <img src="https://www.gravatar.com/avatar/4678a33bf44c38e54a58745033b4d5c6?d=mm" alt="My Avatar" class="img-circle">
               </div>
             </div>
