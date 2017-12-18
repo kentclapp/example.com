@@ -8,7 +8,7 @@
     <body>
       <nav>
         <a href="/">Home</a> |
-        <a href="/resume.html">Resume</a> |
+        <a href="/resume.php">Resume</a> |
         <a href="/contact.php">Contact</a>
       </nav>
       Resume
