@@ -1,138 +1,116 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+/* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+  background: #efefef;
+  height: 100%; }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
 
-    /* apply a natural box layout model to all elements, but allowing components to change */
-    /* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-    html {
-        box-sizing: border-box;
-        background: #efefef;
-        height: 100%;
-    }
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0; }
 
-    *,
-    *:before,
-    *:after {
-        box-sizing: inherit;
-    }
+/* clear floats */
+/* https://www.w3schools.com/howto/howto_css_clearfix.asp */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
 
-    body {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        margin: 0;
-    }
+/* By default we want equal column heights */
+.row {
+  display: flex; }
 
-    /* clear floats */
-    /* https://www.w3schools.com/howto/howto_css_clearfix.asp */
-    .clearfix:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+/* All columns should float to the left */
+.col {
+  float: left;
+  padding: 1em;
+  /* All columns should have the same height but allow for different widths */
+  flex: 1 1 auto; }
 
-    /* By default we want equal column heights */
-    .row {
-      display: flex;
-    }
+.pull-left {
+  float: left; }
 
-    /* All columns should float to the left */
-    .col {
-        float: left;
-        padding: 1em;
-        /* All columns should have the same height but allow for different widths */
-        flex: 1 1 auto;
-    }
+.pull-right {
+  float: right; }
 
-    .pull-left {
-        float: left;
-    }
+/* Center the test in the main nav bar */
+nav.top-nav {
+  text-align: center;
+  background: #aaa; }
 
-    .pull-right {
-        float: right;
-    }
+/* Reset list elements for navigation */
+ul.nav-inline {
+  list-style: none; }
 
-    /* Center the test in the main nav bar */
-    nav.top-nav {
-        text-align: center;
-        background: #aaa;
-    }
+ul.nav,
+ul.nav li,
+ul.nav-inline,
+ul.nav-inline li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-    /* Reset list elements for navigation */
-    ul.nav-inline {
-        list-style: none;
-    }
+ul.nav-inline li {
+  display: inline-block; }
 
-    ul.nav,
-    ul.nav li,
-    ul.nav-inline,
-    ul.nav-inline li {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-    }
+/* Allow the div padding to control the first h1 element's top padding */
+h1:first-of-type {
+  margin-top: 0; }
 
-    ul.nav-inline li {
-        display: inline-block;
-    }
+/* style the anchor tags */
+nav.top-nav a,
+#Footer a {
+  display: inline-block;
+  text-align: center;
+  padding: 8px 20px;
+  text-decoration: none;
+  color: #444;
+  font-weight: bold; }
 
-    /* Allow the div padding to control the first h1 element's top padding */
-    h1:first-of-type {
-        margin-top: 0;
-    }
+#Footer a {
+  color: #fff;
+  padding: 0 0 0 1em;
+  font-size: smaller; }
 
-    /* style the anchor tags */
-    nav.top-nav a,
-    #Footer a {
-        display: inline-block;
-        text-align: center;
-        padding: 8px 20px;
-        text-decoration: none;
-        color: #444;
-        font-weight: bold;
-    }
+/* the main content */
+#Wrapper {
+  width: 1170px;
+  margin: 0 auto; }
 
-    #Footer a {
-        color: #fff;
-        padding: 0 0 0 1em;
-        font-size: smaller;
-    }
+/* The left and right columns will have the same width */
+#Sidebar {
+  width: 340px;
+  background: #cdcdcd; }
 
-    /* the main content */
-    #Wrapper {
-        width: 1170px;
-        margin: 0 auto;
-    }
+/* The middle column will have a fixed width of the remainder of the wrapper */
+#Content {
+  width: 830px;
+  background: #fff; }
 
-    /* The left and right columns will have the same width */
-    #Sidebar {
-        width: 340px;
-        background: #cdcdcd;
-    }
+#Footer {
+  background: #000;
+  color: #fff;
+  padding: 1em;
+  margin: 0; }
 
-    /* The middle column will have a fixed width of the remainder of the wrapper */
-    #Content {
-        width: 830px;
-        background: #fff;
-    }
+#AboutMe {
+  text-align: center; }
 
-    #Footer {
-        background: #000;
-        color: #fff;
-        padding: 1em;
-        margin: 0;
-    }
+#AboutMe > .header {
+  display: block;
+  font-weight: bold;
+  color: #ff9900;
+  margin: 0 0 1em; }
 
-    #AboutMe {
-      text-align: center;
-    }
+.img-circle {
+  border-radius: 50%; }
 
-    #AboutMe > .header {
-      display: block;
-      font-weight: bold;
-      color: #ff9900;
-      margin: 0 0 1em;
-    }
-
-    .img-circle{
-      border-radius: 50%;
-    }
+/*# sourceMappingURL=main.css.map */
