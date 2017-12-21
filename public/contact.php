@@ -1,6 +1,12 @@
 <?php
 require '../core/processContactForm.php';
 
+//Build the page metadata
+$meta = [];
+$meta['title']='tell the world';
+$meta['description'] = "The best thing about hello world is the greeting";
+$meta['keywords'] = "hello world, hello, world";
+
 $content = <<<EOT
 
 <h1 id="header" class="header">Contact Kent</h1>

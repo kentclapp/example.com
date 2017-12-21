@@ -2,9 +2,23 @@
 <html lang="en">
   <head>
       <meta charset="UTF-8">
-      <title>About Jason Snider</title>
+
+      <title><?php echo $meta['title']; ?></title>
+
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <?php if(!empty($meta['description'])): ?>
+        <meta name="description" content="<?php echo $meta['description']; ?>">
+      <?php endif; ?>
+
+      <?php if(!empty($meta['keywords'])): ?>
+       <meta name="keywords" content="<?php echo $meta['keywords']; ?>">
+     <?php endif; ?>
+
+      
+      <link rel="author" href="humans.txt">
       <link rel="stylesheet" type="text/css" href="dist/css/main.css">
+
   </head>
   <body>
 
